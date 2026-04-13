@@ -4,39 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PRT_IF_Statement_prac
+namespace Prallel_arrays_practice_problem
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int age = 25;
-            int TicketPrice;
+
+            string[] productNames ={"Running Shoes","Soccer Ball", "Swim Googles", "Tennies Racket", "Yoga Mat"};
+            double[] price = { 499.99, 149.99, 89.99, 349.99, 199.99 };
+            int[] quantity = { 10, 25, 15, 8, 20 };
 
 
-            if (age <= 4)
-            {
-                TicketPrice = 0;
-            }
-            else if (age >= 5 && age <= 12)
-            {
-                TicketPrice = 50;
-            }
-            else if (age >= 13 && age <= 17)
-            {   
-                TicketPrice = 80;
-            }
-            else if (age >= 18 && age <= 64)
-            {
-                TicketPrice = 120;
-            }
-            else
-            {
-                TicketPrice = 60;
-            }
 
-
-            Console.Write("Ticket price : {0:c}"+  TicketPrice);
+            for (int i = 0; i < quantity.Length; i++) 
+            {
+                Console.Write("Product:  |" + productNames[i] + " Price:  |" + price[i] +  "Quantity: |" + quantity[i]);
+            }
         }
     }
 }
